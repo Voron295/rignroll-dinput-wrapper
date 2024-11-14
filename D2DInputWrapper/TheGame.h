@@ -1,0 +1,181 @@
+#include <Windows.h>
+#include "ScreenElement2.h"
+#include "dvector3.h"
+#include "Font.h"
+#include "GameModule.h"
+#include "InetMessage.h"
+#include "TaskManager.h"
+#include "CMenuInGamePause.h"
+template<int Size> class _SIZE_OF;
+#define _PRE_SIZE_OF(T) typedef _SIZE_OF<sizeof(T)>;
+
+
+#pragma pack(push, 1)
+class TheGame : public ScreenElement
+{
+public:
+	ScreenElementMovieData _movie;
+	SpriteContainer *m_pMenuPauseSpriteContainer;
+	IniParamsUnk field_AA0;
+	CMenuInGamePause *m_pMenuInGamePause;
+	void *field_B2C;
+	Font *menuFont;
+	int field_B34;
+	double field_B38;
+	double field_B40;
+	int field_B48;
+	int field_B4C;
+	int field_B50;
+	int field_B54;
+	dvector3 field_B58;
+	double yawCurrent;
+	double field_B78;
+	double field_B80;
+	double field_B88;
+	double m_dwDeltaTimePassed;
+	double m_dTimePassed;
+	double m_dFrameLen;
+	int field_BA8;
+	int field_BAC;
+	TaskManager m_pTaskManager;
+	enum D2RenderFlags m_dwRenderFlags;
+	int field_BD0;
+	int field_BD4;
+	int debugtime;
+	int field_BDC;
+	int field_BE0;
+	int field_BE4;
+	double xpyramid;
+	double ypyramid;
+	double field_BF8;
+	double field_C00;
+	int field_C08;
+	int field_C0C;
+	int field_C10;
+	int field_C14;
+	GraphicsPalette field_C18;
+	int field_F48;
+	int field_F4C;
+	InetMessage *m_pInetMessages[1000];
+	int m_pInetMessageCount;
+	char *m_sNetCfgTable;
+	FILE *m_pRecordReplayFile;
+	int field_1EFC;
+	int field_1F00;
+	int field_1F04;
+	int field_1F08;
+	int field_1F0C;
+	int field_1F10;
+	int field_1F14;
+	double field_1F18;
+	double field_1F20;
+	int field_1F28;
+	int field_1F2C;
+	int field_1F30;
+	int field_1F34;
+	int field_1F38;
+	int field_1F3C;
+	int field_1F40;
+	int field_1F44;
+	int field_1F48;
+	int field_1F4C;
+	int field_1F50;
+	int field_1F54;
+	int field_1F58;
+	int field_1F5C;
+	int field_1F60;
+	int field_1F64;
+	int field_1F68;
+	int field_1F6C;
+	int field_1F70;
+	int field_1F74;
+	int field_1F78;
+	int field_1F7C;
+	int field_1F80;
+	int field_1F84;
+	int field_1F88;
+	int field_1F8C;
+	int field_1F90;
+	int field_1F94;
+	int field_1F98;
+	int field_1F9C;
+	int field_1FA0;
+	int field_1FA4;
+	int field_1FA8;
+	int field_1FAC;
+	int field_1FB0;
+	int field_1FB4;
+	int field_1FB8;
+	int field_1FBC;
+	int field_1FC0;
+	int field_1FC4;
+	int field_1FC8;
+	int field_1FCC;
+	int field_1FD0;
+	int field_1FD4;
+	int field_1FD8;
+	int field_1FDC;
+	int field_1FE0;
+	int field_1FE4;
+	int field_1FE8;
+	int field_1FEC;
+	int field_1FF0;
+	int field_1FF4;
+	int field_1FF8;
+	int field_1FFC;
+	int field_2000;
+	int field_2004;
+	int field_2008;
+	int field_200C;
+	int field_2010;
+	int field_2014;
+	int field_2018;
+	int field_201C;
+	int field_2020;
+	int field_2024;
+	int field_2028;
+	int field_202C;
+	int field_2030;
+	int field_2034;
+	int field_2038;
+	int field_203C;
+	int field_2040;
+	int field_2044;
+	int field_2048;
+	int field_204C;
+	int field_2050;
+	int field_2054;
+	int field_2058;
+	int field_205C;
+	int field_2060;
+	int field_2064;
+	int field_2068;
+	int field_206C;
+	int field_2070;
+	int field_2074;
+	int field_2078;
+	int field_207C;
+	int field_2080;
+	int field_2084;
+	int field_2088;
+	int field_208C;
+	InetMessage field_2090;
+	int field_20AC;
+	int field_20B0;
+	BYTE field_20B4[1000];
+	int field_249C;
+	float xpyramid_;
+	float ypyramid_;
+	int field_24A8;
+	int field_24AC;
+	int field_24B0;
+	GameModule *m_pLoadRes;
+	int field_24B8;
+	int field_24BC;
+};
+#pragma pack(pop)
+
+
+extern TheGame *&gTheGame;
+
+static_assert (sizeof(TheGame) == 0x24C0, "Size is not correct");

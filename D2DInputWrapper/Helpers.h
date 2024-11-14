@@ -1,0 +1,1 @@
+void *allocMemory(unsigned int size);
